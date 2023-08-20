@@ -79,15 +79,16 @@ body {
   width: 100vw;
 }
 
-#section {
+.header {
   font-family: "Poppins", sans-serif;
   position: relative;
   width: 80vw;
   height: 20vh;
-
+  font-size: 30px;
   display: flex;
   flex-direction: row;
-  align-self: center;
+  justify-content: center;
+  align-items: center;
 }
 .content {
   /* left: 10%; */
