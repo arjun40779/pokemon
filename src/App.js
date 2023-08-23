@@ -4,25 +4,39 @@ import Header from "./components/Header";
 import { Container } from "./components/Container";
 
 function App() {
-  const [pokemons, setPokemon] = useState({});
+  const [pokemonList, setPokemonList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const fetchPokemon = async () => {
+
+  //
+  const fetchPokemons = async () => {
     setLoading(true);
     const res = await fetch(
       "https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1"
     );
     const data = await res.json();
-    setPokemon(data[0].results);
+    let list = data[0].results;
+
+    let pokiList = [];
+    for (const pokemon of list) {
+      const { url } = pokemon;
+      const res = await fetch(url);
+      const data = await res.json();
+      pokiList.push(data);
+    }
+    setPokemonList((prev) => {
+      return [...prev, ...pokiList];
+    });
+    /*   console.log(pokemonList); */
     setLoading(false);
   };
   useEffect(() => {
-    fetchPokemon();
+    fetchPokemons();
   }, []);
 
   return (
     <div className="App">
       <Header />
-      {loading ? null : <Container items={pokemons} />}
+      {loading ? null : <Container pokemonList={pokemonList} />}
     </div>
   );
 }

@@ -241,8 +241,9 @@ body {
   justify-content: center;
 }
 
-.all-container {
+.container {
   display: flex;
+  gap: 20px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -268,7 +269,7 @@ body {
   /* pointer-events: none; */
   overflow: hidden;
 }
-.thumb-container {
+.card {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -285,7 +286,7 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-.thumb-container:hover {
+.card:hover {
   /* margin: 0.7rem 0; */
   z-index: 1;
   transform: scale(1.2);
@@ -295,17 +296,17 @@ body {
 h3 {
   margin-bottom: 0.2rem;
 }
-.thumb-container .number {
+.card .number {
   border-radius: 1rem;
   padding: 0.2rem 0.4rem;
   background-color: rgba(255, 255, 255, 0.3);
 }
-.thumb-container img {
+.card img {
   width: 120px;
   height: 120px;
 }
 
-.thumb-container small {
+.card small {
   text-transform: capitalize;
 }
 .detail-wrapper {

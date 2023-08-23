@@ -1,11 +1,12 @@
 import React from "react";
+import { Card } from "./Card";
 
 export const Container = (props) => {
-  console.log(props);
+  const { pokemonList } = props;
   return (
     <div className="container">
-      {props.items.map((item) => {
-        return <h3 key={item.name}>{item.name}</h3>;
+      {pokemonList.map((pokemonData) => {
+        return <Card key={pokemonData[0].id} pokemonData={pokemonData[0]} />;
       })}
     </div>
   );
