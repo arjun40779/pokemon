@@ -1,7 +1,8 @@
 const Header = () => {
   return (
     <header className="header">
-      <h1>Pokemon KingDom</h1>
+      <h2>Pokemon </h2>
+      <h2> KingDom</h2>
     </header>
   );
 };

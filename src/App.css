@@ -66,13 +66,13 @@ code {
 	font-family: "Poppins", sans-serif;
 } */
 
-body {
+/* body {
   display: flex;
   background: #000;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-}
+} */
 #parent {
   display: flex;
   flex-direction: column;
@@ -151,31 +151,30 @@ body {
   }
 }
 
-.content2 {
-  left: 5cqmax;
+.header {
   width: 100%;
   height: 100%;
   position: relative;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
-.content2 h2 {
+.header h2 {
   margin-top: 2rem;
   margin-bottom: 2rem;
   color: #fff;
-  position: absolute;
+  /*  position: absolute; */
   /* transform: translate(130%, -50%); */
 }
 
-.content2 h2:nth-child(1) {
+/* .header h2:nth-child(1) {
   color: transparent;
   -webkit-text-stroke: 2px #03a9f4;
 }
 
-.content2 h2:nth-child(2) {
+.header h2:nth-child(2) {
   color: #03a9f4;
   animation: animate 4s ease-in-out infinite;
-}
+} */
 
 @keyframes animate {
   0%,
@@ -244,6 +243,7 @@ body {
 .container {
   display: flex;
   gap: 20px;
+  padding: 30px 50px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -271,6 +271,7 @@ body {
 }
 .card {
   display: flex;
+
   position: relative;
   flex-direction: column;
   align-items: center;
@@ -284,6 +285,7 @@ body {
   text-align: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.089);
   transition: transform 0.3s ease-in-out;
+  color: black;
 }
 
 .card:hover {

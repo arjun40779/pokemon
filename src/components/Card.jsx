@@ -6,7 +6,7 @@ export const Card = (props) => {
 
   return (
     <div className={`card ${type}`}>
-      <p className="poki__no">#{id}</p>
+      <p className="number">#{id}</p>
       <img className="poki__img" src={image} />
 
       <h3>{name}</h3>
