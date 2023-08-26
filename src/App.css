@@ -16,6 +16,7 @@ body {
   );
 }
 
+
 code {
   font-family: "Poppins", sans-serif;
 }
@@ -290,7 +291,7 @@ code {
 
 .card:hover {
   /* margin: 0.7rem 0; */
-  z-index: 1;
+  /* z-index: 1; */
   transform: scale(1.2);
   border-radius: 10px;
 }
@@ -357,7 +358,8 @@ button:hover {
 h3 {
   text-decoration: underline;
 }
-.expanded-overlay {
+.expanded {
+  position: fixed;
   border: 2px solid black;
   padding: 2rem;
   display: flex;
@@ -368,7 +370,7 @@ h3 {
   min-height: 20%;
   max-height: 110%;
   z-index: 10;
-  position: fixed;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -441,3 +443,9 @@ h3 {
 /* .expanded-table tr.bold-row td:nth-child(2) {
     font-weight: bold;
   } */
+.expended-view {
+  position: fixed;
+  width: 80vw;
+  height: 50vh;
+  z-index: 10;
+}
