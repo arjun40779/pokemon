@@ -14,6 +14,7 @@ function App() {
       setLoading(true);
       const res = await fetch(url);
       const data = await res.json();
+      console.log(data);
       const list = data[0].results;
       setUrl(data[0].next);
       const pokiList = await Promise.all(
@@ -29,11 +30,23 @@ function App() {
       setLoading(false);
     }
   };
-
+  const handleScroll = () => {
+    if (
+      window.innerHeight + document.documentElement.scrollTop + 1 >=
+      document.documentElement.offsetHeight
+    ) {
+      fetchPokemons();
+    }
+  };
+  /*  useEffect(() => {
+    fetchPokemons();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+ */
   useEffect(() => {
     fetchPokemons();
   }, []);
-
   return (
     <div className="App">
       <header className="header">

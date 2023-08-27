@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Expanded = (props) => {
-  console.log(props, "debug");
+  //console.log(props, "debug");
   const { type, name, image, weight, height, stats } = props.pokemonData[0];
   const { setExpanded } = props;
   const close = () => {
