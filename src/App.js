@@ -30,22 +30,10 @@ function App() {
       setLoading(false);
     }
   };
-  const handleScroll = () => {
-    if (
-      window.innerHeight + document.documentElement.scrollTop + 1 >=
-      document.documentElement.offsetHeight
-    ) {
-      fetchPokemons();
-    }
-  };
-  /*  useEffect(() => {
-    fetchPokemons();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
- */
+
   useEffect(() => {
     fetchPokemons();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="App">

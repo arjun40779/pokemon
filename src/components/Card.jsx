@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Expanded from "./Expanded";
 
 export const Card = (props) => {
-  // console.log(props);
   const { id, name, image, type } = props.pokemonData[0];
   const [expanded, setExpanded] = useState(false);
   const handleClick = () => {
